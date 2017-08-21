@@ -4,25 +4,25 @@ WEBPACK_SERVER_CMD = node_modules/.bin/webpack-dev-server
 WEBPACK_BUNDLE_CMD = node_modules/.bin/webpack-bundle-size-analyzer
 
 start:
-	$(WEBPACK_SERVER_CMD) --config ./webpack/webpack.config.js --port 9004
+	NODE_ENV=development PORT=9004 $(WEBPACK_SERVER_CMD) --config ./webpack/webpack.config.js --port 9004
 
 test:
 	NODE_ENV=test karma start --single
 
 build_webpack:
-	rm -rf dist && rm -rf build && NODE_ENV=production $(WEBPACK_CMD) --config ./webpack/webpack.config.js --display-error-details
+	rm -rf dist && rm -rf build && NODE_ENV=production PORT=9004 $(WEBPACK_CMD) --config ./webpack/webpack.config.js --display-error-details
 
 build_webpack_test:
-	rm -rf static/dist && rm -rf dist && NODE_ENV=development $(WEBPACK_CMD) --config ./webpack/webpack.config.js --display-error-details
+	rm -rf static/dist && rm -rf dist && NODE_ENV=development PORT=9004 $(WEBPACK_CMD) --config ./webpack/webpack.config.js --display-error-details
 
 build_server:
-	rm -rf dist && $(BABEL_CMD) ./src -d ./dist -D
+	rm -rf dist && NODE_ENV=production PORT=9004 $(BABEL_CMD) ./src -d ./dist -D
 
 prod:
-	NODE_ENV=production node ./src/index.js
+	NODE_ENV=production PORT=9004 node ./src/index.js
 
 test:
-	NODE_ENV=development node ./src/index.js
+	NODE_ENV=development PORT=9004 node ./src/index.js
 
 pre_lint:
 	cd ./node_modules/ && pwd
