@@ -1,35 +1,35 @@
+'use strict';
 
-
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-const _react = require('react');
+var _react = require('react');
 
-const _react2 = _interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
-const _propTypes = require('prop-types');
+var _propTypes = require('prop-types');
 
-const _propTypes2 = _interopRequireDefault(_propTypes);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-const _errorTypes = require('./error-types');
+var _errorTypes = require('./error-types');
 
-const _errorTypes2 = _interopRequireDefault(_errorTypes);
+var _errorTypes2 = _interopRequireDefault(_errorTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const ErrorPage = function ErrorPage(_ref) {
-  const params = _ref.params;
-  let type = params.type,
-    showHomeLink = params.showHomeLink;
+var ErrorPage = function ErrorPage(_ref) {
+  var params = _ref.params;
+  var type = params.type,
+      showHomeLink = params.showHomeLink;
 
-  const error = _errorTypes2.default[type] || _errorTypes2.default.notFound;
-  let title = error.title,
-    message = error.message,
-    image = error.image;
+  var error = _errorTypes2.default[type] || _errorTypes2.default.notFound;
+  var title = error.title,
+      message = error.message,
+      image = error.image;
 
 
-  const displayHomeLink = showHomeLink === undefined || showHomeLink;
+  var displayHomeLink = showHomeLink === undefined || showHomeLink;
 
   return _react2.default.createElement(
     'div',
@@ -41,12 +41,12 @@ const ErrorPage = function ErrorPage(_ref) {
       _react2.default.createElement(
         'h1',
         null,
-        title,
+        title
       ),
       _react2.default.createElement(
         'p',
         null,
-        message,
+        message
       ),
       displayHomeLink && _react2.default.createElement(
         'p',
@@ -54,19 +54,19 @@ const ErrorPage = function ErrorPage(_ref) {
         _react2.default.createElement(
           'a',
           { href: '/' },
-          ' Return to Home Page.',
-        ),
-      ),
-    ),
+          ' Return to Home Page.'
+        )
+      )
+    )
   );
 };
 
 ErrorPage.propTypes = {
   params: _propTypes2.default.shape({
     type: _propTypes2.default.string,
-    showHomeLink: _propTypes2.default.bool,
-  }),
+    showHomeLink: _propTypes2.default.bool
+  })
 };
 
 exports.default = ErrorPage;
-module.exports = exports.default;
+module.exports = exports['default'];

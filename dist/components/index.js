@@ -1,49 +1,49 @@
+'use strict';
 
-
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 exports.ErrorPage = exports.UserRow = exports.ResetUserPassword = exports.ChangePassword = exports.PaginationButton = exports.SimpleCheckBoxes = exports.RoleAwareComponent = exports.NotAuthorized = exports.Authorized = exports.NewUser = undefined;
 
-const _newUser = require('./new-user/new-user');
+var _newUser = require('./new-user/new-user');
 
-const _newUser2 = _interopRequireDefault(_newUser);
+var _newUser2 = _interopRequireDefault(_newUser);
 
-const _authorizedRoute = require('./auth/authorized-route');
+var _authorizedRoute = require('./auth/authorized-route');
 
-const _authorizedRoute2 = _interopRequireDefault(_authorizedRoute);
+var _authorizedRoute2 = _interopRequireDefault(_authorizedRoute);
 
-const _notAuthorized = require('./auth/not-authorized');
+var _notAuthorized = require('./auth/not-authorized');
 
-const _notAuthorized2 = _interopRequireDefault(_notAuthorized);
+var _notAuthorized2 = _interopRequireDefault(_notAuthorized);
 
-const _roleAwareComponent = require('./auth/role-aware-component');
+var _roleAwareComponent = require('./auth/role-aware-component');
 
-const _roleAwareComponent2 = _interopRequireDefault(_roleAwareComponent);
+var _roleAwareComponent2 = _interopRequireDefault(_roleAwareComponent);
 
-const _simpleCheckboxes = require('./simple-checkboxes/simple-checkboxes');
+var _simpleCheckboxes = require('./simple-checkboxes/simple-checkboxes');
 
-const _simpleCheckboxes2 = _interopRequireDefault(_simpleCheckboxes);
+var _simpleCheckboxes2 = _interopRequireDefault(_simpleCheckboxes);
 
-const _paginationButton = require('./pagination-button/pagination-button');
+var _paginationButton = require('./pagination-button/pagination-button');
 
-const _paginationButton2 = _interopRequireDefault(_paginationButton);
+var _paginationButton2 = _interopRequireDefault(_paginationButton);
 
-const _changePassword = require('./change-password/change-password');
+var _changePassword = require('./change-password/change-password');
 
-const _changePassword2 = _interopRequireDefault(_changePassword);
+var _changePassword2 = _interopRequireDefault(_changePassword);
 
-const _resetUserPassword = require('./change-password/reset-user-password');
+var _resetUserPassword = require('./change-password/reset-user-password');
 
-const _resetUserPassword2 = _interopRequireDefault(_resetUserPassword);
+var _resetUserPassword2 = _interopRequireDefault(_resetUserPassword);
 
-const _userRow = require('./user-row/user-row');
+var _userRow = require('./user-row/user-row');
 
-const _userRow2 = _interopRequireDefault(_userRow);
+var _userRow2 = _interopRequireDefault(_userRow);
 
-const _errors = require('./errors');
+var _errors = require('./errors');
 
-const _errors2 = _interopRequireDefault(_errors);
+var _errors2 = _interopRequireDefault(_errors);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

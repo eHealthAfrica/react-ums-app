@@ -1,16 +1,16 @@
+'use strict';
 
-
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-const _react = require('react');
+var _react = require('react');
 
-const _react2 = _interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
-const _components = require('components');
+var _components = require('components');
 
-const _utils = require('utils');
+var _utils = require('utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24,4 +24,4 @@ exports.default = function (WrappedComponent, authorizedRoles, user) {
   return Authorized;
 };
 
-module.exports = exports.default;
+module.exports = exports['default'];

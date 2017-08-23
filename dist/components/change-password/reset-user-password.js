@@ -1,58 +1,57 @@
+'use strict';
 
-
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-const _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
-const _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-const _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
 
-const _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-const _createClass2 = require('babel-runtime/helpers/createClass');
+var _createClass2 = require('babel-runtime/helpers/createClass');
 
-const _createClass3 = _interopRequireDefault(_createClass2);
+var _createClass3 = _interopRequireDefault(_createClass2);
 
-const _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
 
-const _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-const _inherits2 = require('babel-runtime/helpers/inherits');
+var _inherits2 = require('babel-runtime/helpers/inherits');
 
-const _inherits3 = _interopRequireDefault(_inherits2);
+var _inherits3 = _interopRequireDefault(_inherits2);
 
-let _class,
-  _temp; /* eslint-disable class-methods-use-this */
+var _class, _temp; /* eslint-disable class-methods-use-this */
 
 
-const _react = require('react');
+var _react = require('react');
 
-const _react2 = _interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react);
 
-const _propTypes = require('prop-types');
+var _propTypes = require('prop-types');
 
-const _propTypes2 = _interopRequireDefault(_propTypes);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-const _reactBootstrap = require('react-bootstrap');
+var _reactBootstrap = require('react-bootstrap');
 
-const _reactRedux = require('react-redux');
+var _reactRedux = require('react-redux');
 
-const _reactReduxToastr = require('react-redux-toastr');
+var _reactReduxToastr = require('react-redux-toastr');
 
-const _userActions = require('redux/actions/userActions');
+var _userActions = require('redux/actions/userActions');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const ResetUserPassword = (_temp = _class = (function (_Component) {
+var ResetUserPassword = (_temp = _class = function (_Component) {
   (0, _inherits3.default)(ResetUserPassword, _Component);
 
   function ResetUserPassword(props) {
     (0, _classCallCheck3.default)(this, ResetUserPassword);
 
-    const _this = (0, _possibleConstructorReturn3.default)(this, (ResetUserPassword.__proto__ || (0, _getPrototypeOf2.default)(ResetUserPassword)).call(this, props));
+    var _this = (0, _possibleConstructorReturn3.default)(this, (ResetUserPassword.__proto__ || (0, _getPrototypeOf2.default)(ResetUserPassword)).call(this, props));
 
     _this.reset = function () {
       _this.setState(_this.getDefaultState());
@@ -70,39 +69,45 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
     };
 
     _this.handleNewPasswordChange = function (event) {
-      let password = event.target.value;
+      var password = event.target.value;
       password = password.trim();
       if (password !== _this.state.cpassword) {
         _this.setState({ errorMessage: 'Password does not match.' });
       } else {
         _this.setState({ errorMessage: '' });
       }
-      _this.setState({ password });
+      _this.setState({ password: password });
     };
 
     _this.handleConfirmPasswordChange = function (event) {
-      let cpassword = event.target.value;
+      var cpassword = event.target.value;
       cpassword = cpassword.trim();
       if (cpassword !== _this.state.password) {
         _this.setState({ errorMessage: 'Password does not match.' });
       } else {
         _this.setState({ errorMessage: '' });
       }
-      _this.setState({ cpassword });
+      _this.setState({ cpassword: cpassword });
     };
 
     _this.handleChangePasswordClick = function () {
-      let _this$state = _this.state,
-        name = _this$state.user.name,
-        password = _this$state.password;
+      var _this$state = _this.state,
+          name = _this$state.user.name,
+          password = _this$state.password;
 
-      _this.props.changeUserPassword({ id: name, password }).then(() => _reactReduxToastr.toastr.success('Password changed successfully', { timeOut: 3000 })).catch(res => _reactReduxToastr.toastr.error(`Failed changing password ${res.error}`, { timeOut: 3000 })).then(() => _this.close());
+      _this.props.changeUserPassword({ id: name, password: password }).then(function () {
+        return _reactReduxToastr.toastr.success('Password changed successfully', { timeOut: 3000 });
+      }).catch(function (res) {
+        return _reactReduxToastr.toastr.error('Failed changing password ' + res.error, { timeOut: 3000 });
+      }).then(function () {
+        return _this.close();
+      });
     };
 
     _this.invalidForm = function () {
-      let _this$state2 = _this.state,
-        password = _this$state2.password,
-        cpassword = _this$state2.cpassword;
+      var _this$state2 = _this.state,
+          password = _this$state2.password,
+          cpassword = _this$state2.cpassword;
 
       return !password || !cpassword || password !== cpassword;
     };
@@ -114,16 +119,16 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
   (0, _createClass3.default)(ResetUserPassword, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      const _this2 = this;
+      var _this2 = this;
 
       if (nextProps.user && nextProps.user !== this.props.user) {
         this.setState({
-          user: nextProps.user,
-        }, () => {
+          user: nextProps.user
+        }, function () {
           _this2.open();
         });
       }
-    },
+    }
   }, {
     key: 'getDefaultState',
     value: function getDefaultState() {
@@ -132,17 +137,17 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
         password: '',
         cpassword: '',
         errorMessage: '',
-        user: {},
+        user: {}
       };
-    },
+    }
   }, {
     key: 'render',
     value: function render() {
-      let _state = this.state,
-        errorMessage = _state.errorMessage,
-        showModal = _state.showModal,
-        _state$user$name = _state.user.name,
-        name = _state$user$name === undefined ? '' : _state$user$name;
+      var _state = this.state,
+          errorMessage = _state.errorMessage,
+          showModal = _state.showModal,
+          _state$user$name = _state.user.name,
+          name = _state$user$name === undefined ? '' : _state$user$name;
 
 
       return _react2.default.createElement(
@@ -157,8 +162,8 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
             _react2.default.createElement(
               _reactBootstrap.Modal.Title,
               null,
-              'Change Users Password',
-            ),
+              'Change Users Password'
+            )
           ),
           _react2.default.createElement(
             _reactBootstrap.Modal.Body,
@@ -166,7 +171,7 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
             errorMessage && _react2.default.createElement(
               _reactBootstrap.Alert,
               { bsStyle: 'danger' },
-              errorMessage,
+              errorMessage
             ),
             _react2.default.createElement(
               _reactBootstrap.FormGroup,
@@ -174,9 +179,9 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
               _react2.default.createElement(
                 _reactBootstrap.ControlLabel,
                 null,
-                'Email',
+                'Email'
               ),
-              _react2.default.createElement(_reactBootstrap.FormControl, { disabled: true, defaultValue: name }),
+              _react2.default.createElement(_reactBootstrap.FormControl, { disabled: true, defaultValue: name })
             ),
             _react2.default.createElement(
               _reactBootstrap.FormGroup,
@@ -184,9 +189,9 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
               _react2.default.createElement(
                 _reactBootstrap.ControlLabel,
                 null,
-                'New Password',
+                'New Password'
               ),
-              _react2.default.createElement(_reactBootstrap.FormControl, { type: 'password', onChange: this.handleNewPasswordChange }),
+              _react2.default.createElement(_reactBootstrap.FormControl, { type: 'password', onChange: this.handleNewPasswordChange })
             ),
             _react2.default.createElement(
               _reactBootstrap.FormGroup,
@@ -194,10 +199,10 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
               _react2.default.createElement(
                 _reactBootstrap.ControlLabel,
                 null,
-                'Confirm New Password',
+                'Confirm New Password'
               ),
-              _react2.default.createElement(_reactBootstrap.FormControl, { type: 'password', onChange: this.handleConfirmPasswordChange }),
-            ),
+              _react2.default.createElement(_reactBootstrap.FormControl, { type: 'password', onChange: this.handleConfirmPasswordChange })
+            )
           ),
           _react2.default.createElement(
             _reactBootstrap.Modal.Footer,
@@ -208,24 +213,24 @@ const ResetUserPassword = (_temp = _class = (function (_Component) {
               _react2.default.createElement(
                 _reactBootstrap.Button,
                 { className: 'radius-secondary', bsStyle: 'default', onClick: this.close },
-                'Close',
+                'Close'
               ),
               _react2.default.createElement(
                 _reactBootstrap.Button,
                 { className: 'radius-secondary', disabled: this.invalidForm(), bsStyle: 'success', onClick: this.handleChangePasswordClick },
-                'Change Password',
-              ),
-            ),
-          ),
-        ),
+                'Change Password'
+              )
+            )
+          )
+        )
       );
-    },
+    }
   }]);
   return ResetUserPassword;
-}(_react.Component)), _class.propTypes = {
+}(_react.Component), _class.propTypes = {
   user: _propTypes2.default.object,
   onClose: _propTypes2.default.func,
-  changeUserPassword: _propTypes2.default.func.isRequired,
+  changeUserPassword: _propTypes2.default.func.isRequired
 }, _temp);
 exports.default = (0, _reactRedux.connect)(null, { changeUserPassword: _userActions.changeUserPassword })(ResetUserPassword);
-module.exports = exports.default;
+module.exports = exports['default'];

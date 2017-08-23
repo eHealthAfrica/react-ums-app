@@ -1,20 +1,20 @@
+'use strict';
 
-
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 
-const _propTypes = require('prop-types');
+var _propTypes = require('prop-types');
 
-const _propTypes2 = _interopRequireDefault(_propTypes);
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
-const _reactRedux = require('react-redux');
+var _reactRedux = require('react-redux');
 
-const _utils = require('utils');
+var _utils = require('utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const RoleAwareComponent = function RoleAwareComponent(props) {
+var RoleAwareComponent = function RoleAwareComponent(props) {
   if ((0, _utils.isUserAuthorized)(props.authorize, props.user)) return props.children;
   return null;
 };
@@ -22,8 +22,8 @@ const RoleAwareComponent = function RoleAwareComponent(props) {
 RoleAwareComponent.propTypes = {
   user: _propTypes2.default.object.isRequired,
   authorize: _propTypes2.default.array.isRequired,
-  children: _propTypes2.default.any.isRequired,
+  children: _propTypes2.default.any.isRequired
 };
 
 exports.default = (0, _reactRedux.connect)(_utils.mapStateToUser)(RoleAwareComponent);
-module.exports = exports.default;
+module.exports = exports['default'];
