@@ -18,7 +18,7 @@ const fileName = isDev ? '[name]' : '[name].[chunkHash]';
 
 module.exports = createConfig([
   entryPoint({
-    app: ['babel-polyfill', './src/client'],
+    app: ['babel-polyfill', './src/index'],
   }),
   setOutput({
     path: path.resolve(__dirname, `../${assetPath}`),
