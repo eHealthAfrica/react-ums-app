@@ -1,4 +1,4 @@
-import ApiClient from 'utils/api';
+import ApiClient from '../../utils/api';
 
 const client = new ApiClient();
 

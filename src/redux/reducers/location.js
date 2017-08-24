@@ -1,4 +1,4 @@
-import { LOCATIONS_SUCCESS } from 'redux/constants';
+import { LOCATIONS_SUCCESS } from '../constants';
 
 export default (state = [], action) => {
   switch (action.type) {

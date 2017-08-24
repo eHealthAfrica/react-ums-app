@@ -1,4 +1,4 @@
-import { LOCATIONS_REQUESTS, LOCATIONS_SUCCESS, LOCATIONS_FAILURE } from 'redux/constants';
+import { LOCATIONS_REQUESTS, LOCATIONS_SUCCESS, LOCATIONS_FAILURE } from '../constants';
 
 const initialState = {
   isLoading: false,

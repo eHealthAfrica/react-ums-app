@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { USERS_SUCCESS, ROLES_SUCCESS, CREATE_USER_SUCCESS,
-  GET_LOGGED_IN_USER_SUCCESS, LOGIN_SUCCESS, EDIT_USER_SUCCESS } from 'redux/constants';
+  GET_LOGGED_IN_USER_SUCCESS, LOGIN_SUCCESS, EDIT_USER_SUCCESS } from '../constants';
 
 const users = (state = [], action) => {
   switch (action.type) {

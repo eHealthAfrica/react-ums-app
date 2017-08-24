@@ -8,7 +8,7 @@
     "dev": "make start",
     "build": "make build_webpack",
     "buildtest": "make build_webpack_test && make test",
-    "prepublish": "make build_server && make build_webpack",
+    "prepublish": "make build_server",
     "start": "make build_server && make build_webpack && make prod",
     "pre-lint": "cd ./node_modules/ && pwd",
     "preinstall": "npm prune",
