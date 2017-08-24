@@ -4,8 +4,8 @@ import cookie from 'react-cookie';
 import { Route, IndexRoute, Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
-import { App, UMS, RequestPasswordReset, ResetPassword } from 'containers';
-import { Authorized, ErrorPage } from 'components';
+import { App, UMS, RequestPasswordReset, ResetPassword } from './containers';
+import { Authorized, ErrorPage } from './components';
 import createStore from './redux/create';
 
 const store = createStore();

@@ -25,9 +25,9 @@ var _reactReduxToastr = require('react-redux-toastr');
 
 var _reactReduxToastr2 = _interopRequireDefault(_reactReduxToastr);
 
-var _containers = require('containers');
+var _containers = require('./containers');
 
-var _components = require('components');
+var _components = require('./components');
 
 var _create = require('./redux/create');
 
