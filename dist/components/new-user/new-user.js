@@ -39,19 +39,19 @@ var _reactBootstrap = require('react-bootstrap');
 
 var _reactRedux = require('react-redux');
 
-var _validation = require('utils/validation');
+var _validation = require('../../utils/validation');
 
 var _validation2 = _interopRequireDefault(_validation);
 
-var _userActions = require('redux/actions/userActions');
+var _userActions = require('../../redux/actions/userActions');
 
-var _components = require('components');
+var _components = require('../../components');
 
-var _config = require('config');
+var _config = require('../../config');
 
 var _config2 = _interopRequireDefault(_config);
 
-var _index = require('utils/index');
+var _index = require('../../utils/index');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

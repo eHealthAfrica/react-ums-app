@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { isUserAuthorized, mapStateToUser } from 'utils';
+import { isUserAuthorized, mapStateToUser } from '../../utils';
 
 const RoleAwareComponent = (props) => {
   if (isUserAuthorized(props.authorize, props.user)) return props.children;

@@ -14,9 +14,9 @@ exports.getResetToken = getResetToken;
 exports.resetPassword = resetPassword;
 exports.changeUserPassword = changeUserPassword;
 
-var _constants = require('redux/constants');
+var _constants = require('../constants');
 
-var _config = require('config');
+var _config = require('../../config');
 
 var _config2 = _interopRequireDefault(_config);
 

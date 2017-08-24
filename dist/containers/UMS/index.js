@@ -48,11 +48,11 @@ var _orderBy = require('lodash/orderBy');
 
 var _orderBy2 = _interopRequireDefault(_orderBy);
 
-var _components = require('components');
+var _components = require('../../components');
 
-var _userActions = require('redux/actions/userActions');
+var _userActions = require('../../redux/actions/userActions');
 
-var _locationActions = require('redux/actions/locationActions');
+var _locationActions = require('../../redux/actions/locationActions');
 
 var _locationActions2 = _interopRequireDefault(_locationActions);
 

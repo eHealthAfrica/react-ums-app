@@ -40,9 +40,9 @@ var _reactRouter = require('react-router');
 
 var _reactBootstrap = require('react-bootstrap');
 
-var _userActions = require('redux/actions/userActions');
+var _userActions = require('../../redux/actions/userActions');
 
-var _logout = require('utils/logout');
+var _logout = require('../../utils/logout');
 
 var _logout2 = _interopRequireDefault(_logout);
 

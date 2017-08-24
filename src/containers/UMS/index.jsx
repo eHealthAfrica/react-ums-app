@@ -4,9 +4,9 @@ import { Col, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { toastr } from 'react-redux-toastr';
 import orderBy from 'lodash/orderBy';
-import { NewUser, UserRow, PaginationButton, ResetUserPassword } from 'components';
-import { getUsers, getRoles, editUser } from 'redux/actions/userActions';
-import fetchLocations from 'redux/actions/locationActions';
+import { NewUser, UserRow, PaginationButton, ResetUserPassword } from '../../components';
+import { getUsers, getRoles, editUser } from '../../redux/actions/userActions';
+import fetchLocations from '../../redux/actions/locationActions';
 
 require('./style.scss');
 

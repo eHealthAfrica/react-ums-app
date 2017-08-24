@@ -41,7 +41,7 @@ var _reactRedux = require('react-redux');
 
 var _reactReduxToastr = require('react-redux-toastr');
 
-var _userActions = require('redux/actions/userActions');
+var _userActions = require('../../redux/actions/userActions');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

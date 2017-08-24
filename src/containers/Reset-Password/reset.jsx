@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { Alert } from 'react-bootstrap';
-import { getResetToken, resetPassword } from 'redux/actions/userActions';
-import logout from 'utils/logout';
+import { getResetToken, resetPassword } from '../../redux/actions/userActions';
+import logout from '../../utils/logout';
 
 class ResetPassword extends Component {
 

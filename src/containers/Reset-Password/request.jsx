@@ -4,7 +4,7 @@ import { toastr } from 'react-redux-toastr';
 import { connect } from 'react-redux';
 import { Alert } from 'react-bootstrap';
 import { Link } from 'react-router';
-import { requestPasswordReset } from 'redux/actions/userActions';
+import { requestPasswordReset } from '../../redux/actions/userActions';
 
 class ResetPasswordRequest extends Component {
 

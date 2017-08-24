@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Modal, Button, FormGroup, ControlLabel, FormControl, Alert } from 'react-bootstrap';
 import { toastr } from 'react-redux-toastr';
-import { changePassword } from 'redux/actions/userActions';
+import { changePassword } from '../../redux/actions/userActions';
 
 class ChangePassword extends Component {
 

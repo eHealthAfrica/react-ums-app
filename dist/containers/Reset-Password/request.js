@@ -42,7 +42,7 @@ var _reactBootstrap = require('react-bootstrap');
 
 var _reactRouter = require('react-router');
 
-var _userActions = require('redux/actions/userActions');
+var _userActions = require('../../redux/actions/userActions');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

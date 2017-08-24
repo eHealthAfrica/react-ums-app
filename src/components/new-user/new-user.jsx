@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col, Modal, Button, FormGroup, ControlLabel, FormControl, Alert, Checkbox } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import isValidEmail from 'utils/validation';
-import { getUser, createUser, editUser } from 'redux/actions/userActions';
-import { SimpleCheckBoxes } from 'components';
-import config from 'config';
-import { mapValuesInObject } from 'utils/index';
+import isValidEmail from '../../utils/validation';
+import { getUser, createUser, editUser } from '../../redux/actions/userActions';
+import { SimpleCheckBoxes } from '../../components';
+import config from '../../config';
+import { mapValuesInObject } from '../../utils/index';
 
 class NewUser extends Component {
 
