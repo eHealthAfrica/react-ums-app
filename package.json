@@ -1,5 +1,5 @@
 {
-  "name": "react-ums",
+  "name": "react-ums-app",
   "version": "0.3.7",
   "description": "A react front-end npm package for managing users and related user activities in different systems.",
   "main": "index.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eHealthAfrica/react-ums.git"
+    "url": "git+https://github.com/eHealthAfrica/react-ums-app.git"
   },
   "keywords": [
     "UMS",
@@ -29,9 +29,9 @@
   "author": "eHealth Africa <http://ehealthafrica.org>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eHealthAfrica/react-ums/issues"
+    "url": "https://github.com/eHealthAfrica/react-ums-app/issues"
   },
-  "homepage": "https://github.com/eHealthAfrica/react-ums#readme",
+  "homepage": "https://github.com/eHealthAfrica/react-ums-app#readme",
   "devDependencies": {
     "@webpack-blocks/babel6": "^0.3.0",
     "@webpack-blocks/css-modules": "^0.3.0",
