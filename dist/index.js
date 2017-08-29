@@ -6,9 +6,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = require('react-dom');
 
-var _main = require('./main');
+var _app = require('./app');
 
-var _main2 = _interopRequireDefault(_main);
+var _app2 = _interopRequireDefault(_app);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,4 +25,4 @@ var user = {
 
 var authorizedRole = ['admin'];
 
-(0, _reactDom.render)(_react2.default.createElement(_main2.default, { user: user, authorizedRole: authorizedRole }), mountNode);
+(0, _reactDom.render)(_react2.default.createElement(_app2.default, { user: user, authorizedRole: authorizedRole }), mountNode);

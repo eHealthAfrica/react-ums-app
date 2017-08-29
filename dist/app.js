@@ -48,7 +48,7 @@ var UmsApp = function UmsApp(props) {
         { history: _reactRouter.hashHistory },
         _react2.default.createElement(
           _reactRouter.Route,
-          { path: '/', component: (0, _components.Authorized)(_containers.App, authorizedRole, user) },
+          { path: '/user-management', component: (0, _components.Authorized)(_containers.App, authorizedRole, user) },
           _react2.default.createElement(_reactRouter.IndexRoute, { component: _containers.UMS }),
           _react2.default.createElement(_reactRouter.Route, { path: 'error/:type', component: _components.ErrorPage }),
           _react2.default.createElement(_reactRouter.Route, { path: 'request-reset', component: _containers.RequestPasswordReset }),

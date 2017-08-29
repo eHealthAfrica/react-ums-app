@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import UmsApp from './main';
+import UmsApp from './app';
 
 const mountNode = document.getElementById('content');
 
