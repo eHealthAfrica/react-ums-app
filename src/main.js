@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cookie from 'react-cookie';
 import { Route, IndexRoute, Router, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import ReduxToastr from 'react-redux-toastr';
@@ -37,9 +36,6 @@ UmsApp.propTypes = {
 
 export default UmsApp;
 
-export const init = (user, role, authToken) => {
-  if (cookie.load('accessToken') === undefined) {
-    cookie.save('accessToken', authToken, { path: '/' });
-  }
-  return <UmsApp user={user} authorizedRole={role} />;
-};
+export function init(user, authorizedRole) {
+  return <UmsApp user={user} authorizedRole={authorizedRole} />;
+}

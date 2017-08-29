@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.init = undefined;
+exports.init = init;
 
 var _react = require('react');
 
@@ -12,10 +12,6 @@ var _react2 = _interopRequireDefault(_react);
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _reactCookie = require('react-cookie');
-
-var _reactCookie2 = _interopRequireDefault(_reactCookie);
 
 var _reactRouter = require('react-router');
 
@@ -71,9 +67,6 @@ UmsApp.propTypes = {
 };
 
 exports.default = UmsApp;
-var init = exports.init = function init(user, role, authToken) {
-  if (_reactCookie2.default.load('accessToken') === undefined) {
-    _reactCookie2.default.save('accessToken', authToken, { path: '/' });
-  }
-  return _react2.default.createElement(UmsApp, { user: user, authorizedRole: role });
-};
+function init(user, authorizedRole) {
+  return _react2.default.createElement(UmsApp, { user: user, authorizedRole: authorizedRole });
+}
