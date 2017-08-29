@@ -15,7 +15,7 @@ const UmsApp = (props) => {
     <Provider store={store}>
       <div>
         <Router history={hashHistory}>
-          <Route path="/" component={Authorized(App, authorizedRole, user)}>
+          <Route path="/user-management" component={Authorized(App, authorizedRole, user)}>
             <IndexRoute component={UMS} />
             <Route path="error/:type" component={ErrorPage} />
             <Route path="request-reset" component={RequestPasswordReset} />
